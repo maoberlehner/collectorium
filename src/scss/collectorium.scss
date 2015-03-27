@@ -5,7 +5,7 @@
  * CONTENTS
  * VARIABLES...........
  * FUNCTION............
- * STYLE...............
+ * THEME...............
  */
 
 
@@ -25,7 +25,6 @@ $collectorium-namespace: 'o-collectorium' !default;
 .#{$collectorium-namespace}__anchor {
   position: fixed;
   top: 0;
-  margin: 0;
 }
 
 .#{$collectorium-namespace}__anchor:target ~ :last-child,
@@ -43,7 +42,7 @@ $collectorium-namespace: 'o-collectorium' !default;
 
 
 /*------------------------------------*\
-  $STYLE
+  $THEME
 \*------------------------------------*/
 
 .#{$collectorium-namespace}__tabs {
@@ -56,10 +55,19 @@ $collectorium-namespace: 'o-collectorium' !default;
 }
 
 .#{$collectorium-namespace}__tab-link {
+  display: inline-block;
   padding: 0.5em 1em;
-  background: #efefef;
+  background: #fff;
   text-decoration: none;
-  &:active {
-    background: #fff;
+  &:active,
+  &:focus,
+  &.is-active {
+    outline: none;
+    background: #efefef;
   }
+}
+
+.#{$collectorium-namespace}__contents {
+  padding: 1em;
+  background: #efefef;
 }
