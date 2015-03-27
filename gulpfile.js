@@ -10,23 +10,23 @@ var gutil        = require('gulp-util');
 
 // Styles
 gulp.task('styles', function () {
-  return gulp.src('src/**/*.scss')
+  return gulp.src('src/scss/**/*.scss')
     .pipe(sass({ style: 'compact', precision: 7, sourcemap: true }))
     .on('error', gutil.log)
     .pipe(autoprefixer('last 2 versions'))
     .on('error', gutil.log)
-    .pipe(gulp.dest('dist'));
+    .pipe(gulp.dest('dist/css'));
 });
 
 // Minify
 gulp.task('minify', ['styles'], function () {
-  return gulp.src(['dist/collectorium.css'])
+  return gulp.src(['dist/css/collectorium.css'])
     .pipe(minifyCSS())
     .pipe(cssshrink())
     .pipe(rename(function (path) {
       path.basename += '.min';
     }))
-    .pipe(gulp.dest('dist'))
+    .pipe(gulp.dest('dist/css'))
     .pipe(livereload());
 });
 

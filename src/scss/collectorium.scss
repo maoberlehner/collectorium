@@ -1,0 +1,65 @@
+/*------------------------------------*\
+  COLLECTORIUM
+\*------------------------------------*/
+/**
+ * CONTENTS
+ * VARIABLES...........
+ * FUNCTION............
+ * STYLE...............
+ */
+
+
+
+/*------------------------------------*\
+  $VARIABLES
+\*------------------------------------*/
+
+$collectorium-namespace: 'o-collectorium' !default;
+
+
+
+/*------------------------------------*\
+  $FUNCTION
+\*------------------------------------*/
+
+.#{$collectorium-namespace}__anchor {
+  position: fixed;
+  top: 0;
+  margin: 0;
+}
+
+.#{$collectorium-namespace}__anchor:target ~ :last-child,
+.#{$collectorium-namespace}__content.is-active ~ :last-child,
+.#{$collectorium-namespace}__content {
+  display: none;
+}
+
+.#{$collectorium-namespace}__content:last-child,
+.#{$collectorium-namespace}__anchor:target + .#{$collectorium-namespace}__content,
+.#{$collectorium-namespace}__content.is-active {
+  display: block;
+}
+
+
+
+/*------------------------------------*\
+  $STYLE
+\*------------------------------------*/
+
+.#{$collectorium-namespace}__tabs {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.#{$collectorium-namespace}__tab-title {
+  display: inline-block;
+}
+
+.#{$collectorium-namespace}__tab-link {
+  padding: 0.5em 1em;
+  background: #efefef;
+  text-decoration: none;
+  &:active {
+    background: #fff;
+  }
+}
