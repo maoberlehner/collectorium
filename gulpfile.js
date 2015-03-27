@@ -2,12 +2,15 @@
 var gulp         = require('gulp');
 var autoprefixer = require('gulp-autoprefixer');
 var cssshrink    = require('gulp-cssshrink');
+var gzip         = require('gulp-gzip');
 var livereload   = require('gulp-livereload');
 var minifyCSS    = require('gulp-minify-css');
 var rename       = require('gulp-rename');
 var sass         = require('gulp-ruby-sass');
 var size         = require('gulp-size');
+var tar          = require('gulp-tar');
 var uglify       = require('gulp-uglify');
+var zip          = require('gulp-zip');
 
 // Styles
 gulp.task('styles', function () {
@@ -54,4 +57,14 @@ gulp.task('watch', function () {
 // Default
 gulp.task('default', function () {
   gulp.start('watch');
+});
+
+// Package
+gulp.task('package', function () {
+  return gulp.src(['dist/css/*.css', 'dist/js/*.js'])
+    .pipe(zip('collectorium.zip'))
+    .pipe(gulp.dest('./'))
+    .pipe(tar('collectorium.tar'))
+    .pipe(gzip())
+    .pipe(gulp.dest('./'));
 });
