@@ -7,105 +7,141 @@
     <meta name="description" content="CSS only Tabs">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="../dist/css/collectorium.css">
-    <link rel="stylesheet" href="css/demo.css">
+    <link rel="stylesheet" href="vendor/normalize/normalize.css">
+    <link rel="stylesheet" href="css/demo.min.css">
   </head>
   <body>
     <!--[if lt IE 9]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/" rel="nofollow">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
+    <div class="c-hero">
+      <header class="u-text-align-center">
+        <h1>collectorium</h1>
+        <h2>Pure CSS tabs</h2>
+      </header>
+      <div id="enhanced-tabs-quick-demo" class="o-container c-quick-demo">
+        <div class="o-collectorium">
+          <ul class="o-collectorium__tabs" role="tablist">
+            <li class="o-collectorium__tab-title" role="presentational" >
+              <a href="#purecss" class="o-collectorium__tab-link" role="tab" controls="purecss">Pure CSS</a>
+            </li>
+            <li class="o-collectorium__tab-title" role="presentational" >
+              <a href="#jsenhanced" class="o-collectorium__tab-link" role="tab" controls="jsenhanced">JS enhanced</a>
+            </li>
+          </ul>
+          <div class="o-collectorium__contents">
+            <a name="jsenhanced" id="jsenhanced" class="o-collectorium__anchor"></a>
+            <section role="tabpanel" class="o-collectorium__content">
+              <h4>JS enhanced</h4>
+              <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.</p>
+            </section>
+            <a name="purecss" id="purecss" class="o-collectorium__anchor"></a>
+            <section role="tabpanel" class="o-collectorium__content">
+              <h4>Pure CSS</h4>
+              <p>Sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+            </section>
+          </div>
+        </div>
+      </div>
+      <div class="c-call-to-action u-text-align-center">
+        <a class="c-button c-button--contrast c-button--github" href="https://github.com/maoberlehner/collectorium">View on GitHub</a>
+        <a class="c-button c-button--contrast c-button--secondary" href="https://github.com/maoberlehner/collectorium">Download (X kB)</a>
+      </div>
+    </div>
+
     <article>
-      <div class="hero">
-        <header>
-          <h1>collectorium</h1>
-          <h2>Pure CSS tabs</h2>
-        </header>
-      </div>
+      <div class="o-container">
+        <section class="c-example c-example--pure-css">
+          <h3>Pure CSS Tabs</h3>
+          <div class="o-collectorium">
+            <ul class="o-collectorium__tabs" role="tablist">
+              <li class="o-collectorium__tab-title" role="presentational" >
+                <a href="#tab1-1" class="o-collectorium__tab-link" role="tab" controls="tab1-1">Tab 1</a>
+              </li>
+              <li class="o-collectorium__tab-title" role="presentational" >
+                <a href="#tab1-2" class="o-collectorium__tab-link" role="tab" controls="tab1-2">Tab 2</a>
+              </li>
+              <li class="o-collectorium__tab-title" role="presentational" >
+                <a href="#tab1-3" class="o-collectorium__tab-link" role="tab" controls="tab1-3">Tab 3</a>
+              </li>
+              <li class="o-collectorium__tab-title" role="presentational" >
+                <a href="#tab1-4" class="o-collectorium__tab-link" role="tab" controls="tab1-4">Tab 4</a>
+              </li>
+            </ul>
+            <div class="o-collectorium__contents">
+              <a name="tab1-2" id="tab1-2" class="o-collectorium__anchor"></a>
+              <section role="tabpanel" class="o-collectorium__content">
+                <h4>Second tab content goes here...</h4>
+                <p>Sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+              </section>
+              <a name="tab1-3" id="tab1-3" class="o-collectorium__anchor"></a>
+              <section role="tabpanel" class="o-collectorium__content">
+                <h4>Third tab content goes here...</h4>
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.</p>
+              </section>
+              <a name="tab1-4" id="tab1-4" class="o-collectorium__anchor"></a>
+              <section role="tabpanel" class="o-collectorium__content">
+                <h4>Fourth tab content goes here...</h4>
+                <p>Diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+              </section>
+              <a name="tab1-1" id="tab1-1" class="o-collectorium__anchor"></a>
+              <section role="tabpanel" class="o-collectorium__content">
+                <h4>First tab content goes here...</h4>
+                <p>Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+              </section>
+            </div>
+          </div>
+        </section>
 
-      <h3>Pure CSS Tabs</h3>
-      <div class="o-collectorium">
-        <ul class="o-collectorium__tabs" role="tablist">
-          <li class="o-collectorium__tab-title" role="presentational" >
-            <a href="#tab1-1" class="o-collectorium__tab-link" role="tab" controls="tab1-1">Tab 1</a>
-          </li>
-          <li class="o-collectorium__tab-title" role="presentational" >
-            <a href="#tab1-2" class="o-collectorium__tab-link" role="tab" controls="tab1-2">Tab 2</a>
-          </li>
-          <li class="o-collectorium__tab-title" role="presentational" >
-            <a href="#tab1-3" class="o-collectorium__tab-link" role="tab" controls="tab1-3">Tab 3</a>
-          </li>
-          <li class="o-collectorium__tab-title" role="presentational" >
-            <a href="#tab1-4" class="o-collectorium__tab-link" role="tab" controls="tab1-4">Tab 4</a>
-          </li>
-        </ul>
-        <div class="o-collectorium__contents">
-          <a name="tab1-2" id="tab1-2" class="o-collectorium__anchor"></a>
-          <section role="tabpanel" class="o-collectorium__content">
-            <h4>Second tab content goes here...</h4>
-            <p>Sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
-          </section>
-          <a name="tab1-3" id="tab1-3" class="o-collectorium__anchor"></a>
-          <section role="tabpanel" class="o-collectorium__content">
-            <h4>Third tab content goes here...</h4>
-            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.</p>
-          </section>
-          <a name="tab1-4" id="tab1-4" class="o-collectorium__anchor"></a>
-          <section role="tabpanel" class="o-collectorium__content">
-            <h4>Fourth tab content goes here...</h4>
-            <p>Diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
-          </section>
-          <a name="tab1-1" id="tab1-1" class="o-collectorium__anchor"></a>
-          <section role="tabpanel" class="o-collectorium__content">
-            <h4>First tab content goes here...</h4>
-            <p>Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
-          </section>
-        </div>
-      </div>
-
-      <h3>JS Enhanced Tabs</h3>
-      <div id="enhanced-tabs-1" class="o-collectorium">
-        <ul class="o-collectorium__tabs" role="tablist">
-          <li class="o-collectorium__tab-title" role="presentational" >
-            <a href="#tab2-1" class="o-collectorium__tab-link" role="tab" controls="tab2-1">Tab 1</a>
-          </li>
-          <li class="o-collectorium__tab-title" role="presentational" >
-            <a href="#tab2-2" class="o-collectorium__tab-link" role="tab" controls="tab2-2">Tab 2</a>
-          </li>
-          <li class="o-collectorium__tab-title" role="presentational" >
-            <a href="#tab2-3" class="o-collectorium__tab-link" role="tab" controls="tab2-3">Tab 3</a>
-          </li>
-          <li class="o-collectorium__tab-title" role="presentational" >
-            <a href="#tab2-4" class="o-collectorium__tab-link" role="tab" controls="tab2-4">Tab 4</a>
-          </li>
-        </ul>
-        <div class="o-collectorium__contents">
-          <a name="tab2-1" id="tab2-1" class="o-collectorium__anchor"></a>
-          <section role="tabpanel" class="o-collectorium__content">
-            <h4>First tab content goes here...</h4>
-            <p>Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
-          </section>
-          <a name="tab2-2" id="tab2-2" class="o-collectorium__anchor"></a>
-          <section role="tabpanel" class="o-collectorium__content">
-            <h4>Second tab content goes here...</h4>
-            <p>Sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
-          </section>
-          <a name="tab2-3" id="tab2-3" class="o-collectorium__anchor"></a>
-          <section role="tabpanel" class="o-collectorium__content">
-            <h4>Third tab content goes here...</h4>
-            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.</p>
-          </section>
-          <a name="tab2-4" id="tab2-4" class="o-collectorium__anchor"></a>
-          <section role="tabpanel" class="o-collectorium__content">
-            <h4>Fourth tab content goes here...</h4>
-            <p>Diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
-          </section>
-        </div>
+        <section class="c-example c-example--js-enhanced">
+          <h3>JS Enhanced Tabs</h3>
+          <div id="enhanced-tabs-1" class="o-collectorium">
+            <ul class="o-collectorium__tabs" role="tablist">
+              <li class="o-collectorium__tab-title" role="presentational" >
+                <a href="#tab2-1" class="o-collectorium__tab-link" role="tab" controls="tab2-1">Tab 1</a>
+              </li>
+              <li class="o-collectorium__tab-title" role="presentational" >
+                <a href="#tab2-2" class="o-collectorium__tab-link" role="tab" controls="tab2-2">Tab 2</a>
+              </li>
+              <li class="o-collectorium__tab-title" role="presentational" >
+                <a href="#tab2-3" class="o-collectorium__tab-link" role="tab" controls="tab2-3">Tab 3</a>
+              </li>
+              <li class="o-collectorium__tab-title" role="presentational" >
+                <a href="#tab2-4" class="o-collectorium__tab-link" role="tab" controls="tab2-4">Tab 4</a>
+              </li>
+            </ul>
+            <div class="o-collectorium__contents">
+              <a name="tab2-2" id="tab2-2" class="o-collectorium__anchor"></a>
+              <section role="tabpanel" class="o-collectorium__content">
+                <h4>Second tab content goes here...</h4>
+                <p>Sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+              </section>
+              <a name="tab2-3" id="tab2-3" class="o-collectorium__anchor"></a>
+              <section role="tabpanel" class="o-collectorium__content">
+                <h4>Third tab content goes here...</h4>
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.</p>
+              </section>
+              <a name="tab2-4" id="tab2-4" class="o-collectorium__anchor"></a>
+              <section role="tabpanel" class="o-collectorium__content">
+                <h4>Fourth tab content goes here...</h4>
+                <p>Diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+              </section>
+              <a name="tab2-1" id="tab2-1" class="o-collectorium__anchor"></a>
+              <section role="tabpanel" class="o-collectorium__content">
+                <h4>First tab content goes here...</h4>
+                <p>Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+              </section>
+            </div>
+          </div>
+        </section>
       </div>
     </article>
     <script src="../dist/js/collectorium.enhance.min.js"></script>
     <script>
+      var enhancedTabsQuickDemo = document.getElementById('enhanced-tabs-quick-demo');
+      new Collectorium(enhancedTabsQuickDemo);
+
       var enhancedTabs1 = document.getElementById('enhanced-tabs-1');
       new Collectorium(enhancedTabs1);
     </script>
