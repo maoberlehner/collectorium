@@ -4,7 +4,7 @@
   "author": "Markus Oberlehner",
   "license": "GPL v2",
   "devDependencies": {
-    "gulp": "~3.8.9",
+    "gulp": "~3.8.8",
     "gulp-autoprefixer": "0.0.6",
     "gulp-cssshrink": "^0.1.4",
     "gulp-livereload": "~1.2.0",
