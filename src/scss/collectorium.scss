@@ -57,7 +57,6 @@ $collectorium-namespace: 'o-collectorium' !default;
 .#{$collectorium-namespace}__tab-link {
   display: inline-block;
   padding: 0.5em 1em;
-  background: #fff;
   text-decoration: none;
   &:active,
   &:focus,

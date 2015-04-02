@@ -17,7 +17,7 @@
 
 .o-collectorium__tab-title { display: inline-block; }
 
-.o-collectorium__tab-link { display: inline-block; padding: 0.5em 1em; background: #fff; text-decoration: none; }
+.o-collectorium__tab-link { display: inline-block; padding: 0.5em 1em; text-decoration: none; }
 .o-collectorium__tab-link:active, .o-collectorium__tab-link:focus, .o-collectorium__tab-link.is-active { outline: none; background: #efefef; }
 
 .o-collectorium__contents { padding: 1em; background: #efefef; }
