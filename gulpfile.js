@@ -63,8 +63,10 @@ gulp.task('default', function () {
 gulp.task('package', function () {
   return gulp.src(['dist/css/*.css', 'dist/js/*.js'])
     .pipe(zip('collectorium.zip'))
+    .pipe(size({ title: 'ZIP' }))
     .pipe(gulp.dest('./'))
     .pipe(tar('collectorium.tar'))
     .pipe(gzip())
+    .pipe(size({ title: 'TAR' }))
     .pipe(gulp.dest('./'));
 });
