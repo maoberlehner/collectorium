@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="vendor/normalize/normalize.css">
+    <link rel="stylesheet" href="vendor/prism/prism.css">
     <link rel="stylesheet" href="css/demo.min.css">
   </head>
   <body>
@@ -20,7 +21,7 @@
         <h1>collectorium</h1>
         <h2>Pure CSS tabs</h2>
       </header>
-      <div id="enhanced-tabs-quick-demo" class="o-container c-quick-demo">
+      <div id="enhanced-tabs-quick-demo" class="o-container o-container--narrow c-quick-demo">
         <div class="o-collectorium">
           <ul class="o-collectorium__tabs" role="tablist">
             <li class="o-collectorium__tab-title" role="presentational" >
@@ -88,10 +89,53 @@
               <a name="tab1-1" id="tab1-1" class="o-collectorium__anchor"></a>
               <section role="tabpanel" class="o-collectorium__content">
                 <h4>First tab content goes here...</h4>
-                <p>Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                <p>Consetetur sadipscing elitr, sed diam nonumy tempor invidunt ut labore et dolore magna aliquyam erat, sed.</p>
               </section>
             </div>
           </div>
+          <pre><code class="language-markup">&#x3C;div class=&#x22;o-collectorium&#x22;&#x3E;
+  &#x3C;ul class=&#x22;o-collectorium__tabs&#x22; role=&#x22;tablist&#x22;&#x3E;
+    &#x3C;li class=&#x22;o-collectorium__tab-title&#x22; role=&#x22;presentational&#x22; &#x3E;
+      &#x3C;a href=&#x22;#tab1-1&#x22; class=&#x22;o-collectorium__tab-link&#x22; role=&#x22;tab&#x22; controls=&#x22;tab1-1&#x22;&#x3E;Tab 1&#x3C;/a&#x3E;
+    &#x3C;/li&#x3E;
+    &#x3C;li class=&#x22;o-collectorium__tab-title&#x22; role=&#x22;presentational&#x22; &#x3E;
+      &#x3C;a href=&#x22;#tab1-2&#x22; class=&#x22;o-collectorium__tab-link&#x22; role=&#x22;tab&#x22; controls=&#x22;tab1-2&#x22;&#x3E;Tab 2&#x3C;/a&#x3E;
+    &#x3C;/li&#x3E;
+    &#x3C;li class=&#x22;o-collectorium__tab-title&#x22; role=&#x22;presentational&#x22; &#x3E;
+      &#x3C;a href=&#x22;#tab1-3&#x22; class=&#x22;o-collectorium__tab-link&#x22; role=&#x22;tab&#x22; controls=&#x22;tab1-3&#x22;&#x3E;Tab 3&#x3C;/a&#x3E;
+    &#x3C;/li&#x3E;
+    &#x3C;li class=&#x22;o-collectorium__tab-title&#x22; role=&#x22;presentational&#x22; &#x3E;
+      &#x3C;a href=&#x22;#tab1-4&#x22; class=&#x22;o-collectorium__tab-link&#x22; role=&#x22;tab&#x22; controls=&#x22;tab1-4&#x22;&#x3E;Tab 4&#x3C;/a&#x3E;
+    &#x3C;/li&#x3E;
+  &#x3C;/ul&#x3E;
+  &#x3C;div class=&#x22;o-collectorium__contents&#x22;&#x3E;
+    &#x3C;a name=&#x22;tab1-2&#x22; id=&#x22;tab1-2&#x22; class=&#x22;o-collectorium__anchor&#x22;&#x3E;&#x3C;/a&#x3E;
+    &#x3C;section role=&#x22;tabpanel&#x22; class=&#x22;o-collectorium__content&#x22;&#x3E;
+      &#x3C;h4&#x3E;Second tab content goes here...&#x3C;/h4&#x3E;
+      &#x3C;p&#x3E;Sed diam nonumy eirmod tempor invidunt ut labore et
+      dolore magna aliquyam erat, sed diam voluptua.&#x3C;/p&#x3E;
+    &#x3C;/section&#x3E;
+    &#x3C;a name=&#x22;tab1-3&#x22; id=&#x22;tab1-3&#x22; class=&#x22;o-collectorium__anchor&#x22;&#x3E;&#x3C;/a&#x3E;
+    &#x3C;section role=&#x22;tabpanel&#x22; class=&#x22;o-collectorium__content&#x22;&#x3E;
+      &#x3C;h4&#x3E;Third tab content goes here...&#x3C;/h4&#x3E;
+      &#x3C;p&#x3E;Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+      sed diam nonumy eirmod tempor invidunt.&#x3C;/p&#x3E;
+    &#x3C;/section&#x3E;
+    &#x3C;a name=&#x22;tab1-4&#x22; id=&#x22;tab1-4&#x22; class=&#x22;o-collectorium__anchor&#x22;&#x3E;&#x3C;/a&#x3E;
+    &#x3C;section role=&#x22;tabpanel&#x22; class=&#x22;o-collectorium__content&#x22;&#x3E;
+      &#x3C;h4&#x3E;Fourth tab content goes here...&#x3C;/h4&#x3E;
+      &#x3C;p&#x3E;Diam nonumy eirmod tempor invidunt ut labore et
+      dolore magna aliquyam erat, sed diam voluptua.&#x3C;/p&#x3E;
+    &#x3C;/section&#x3E;
+    &#x3C;a name=&#x22;tab1-1&#x22; id=&#x22;tab1-1&#x22; class=&#x22;o-collectorium__anchor&#x22;&#x3E;&#x3C;/a&#x3E;
+    &#x3C;section role=&#x22;tabpanel&#x22; class=&#x22;o-collectorium__content&#x22;&#x3E;
+      &#x3C;h4&#x3E;First tab content goes here...&#x3C;/h4&#x3E;
+      &#x3C;p&#x3E;Consetetur sadipscing elitr, sed diam nonumy
+      tempor invidunt ut labore et dolore magna aliquyam erat, sed.&#x3C;/p&#x3E;
+    &#x3C;/section&#x3E;
+  &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;</code></pre>
+          <pre><code class="language-javascript">// None!</code></pre>
         </section>
 
         <section class="c-example c-example--js-enhanced">
@@ -134,10 +178,51 @@
               </section>
             </div>
           </div>
+          <pre><code class="language-markup">&#x3C;div id=&#x22;enhanced-tabs-1&#x22; class=&#x22;o-collectorium&#x22;&#x3E;
+  &#x3C;ul class=&#x22;o-collectorium__tabs&#x22; role=&#x22;tablist&#x22;&#x3E;
+    &#x3C;li class=&#x22;o-collectorium__tab-title&#x22; role=&#x22;presentational&#x22; &#x3E;
+      &#x3C;a href=&#x22;#tab2-1&#x22; class=&#x22;o-collectorium__tab-link&#x22; role=&#x22;tab&#x22; controls=&#x22;tab2-1&#x22;&#x3E;Tab 1&#x3C;/a&#x3E;
+    &#x3C;/li&#x3E;
+    &#x3C;li class=&#x22;o-collectorium__tab-title&#x22; role=&#x22;presentational&#x22; &#x3E;
+      &#x3C;a href=&#x22;#tab2-2&#x22; class=&#x22;o-collectorium__tab-link&#x22; role=&#x22;tab&#x22; controls=&#x22;tab2-2&#x22;&#x3E;Tab 2&#x3C;/a&#x3E;
+    &#x3C;/li&#x3E;
+    &#x3C;li class=&#x22;o-collectorium__tab-title&#x22; role=&#x22;presentational&#x22; &#x3E;
+      &#x3C;a href=&#x22;#tab2-3&#x22; class=&#x22;o-collectorium__tab-link&#x22; role=&#x22;tab&#x22; controls=&#x22;tab2-3&#x22;&#x3E;Tab 3&#x3C;/a&#x3E;
+    &#x3C;/li&#x3E;
+    &#x3C;li class=&#x22;o-collectorium__tab-title&#x22; role=&#x22;presentational&#x22; &#x3E;
+      &#x3C;a href=&#x22;#tab2-4&#x22; class=&#x22;o-collectorium__tab-link&#x22; role=&#x22;tab&#x22; controls=&#x22;tab2-4&#x22;&#x3E;Tab 4&#x3C;/a&#x3E;
+    &#x3C;/li&#x3E;
+  &#x3C;/ul&#x3E;
+  &#x3C;div class=&#x22;o-collectorium__contents&#x22;&#x3E;
+    &#x3C;a name=&#x22;tab2-2&#x22; id=&#x22;tab2-2&#x22; class=&#x22;o-collectorium__anchor&#x22;&#x3E;&#x3C;/a&#x3E;
+    &#x3C;section role=&#x22;tabpanel&#x22; class=&#x22;o-collectorium__content&#x22;&#x3E;
+      &#x3C;h4&#x3E;Second tab content goes here...&#x3C;/h4&#x3E;
+      &#x3C;p&#x3E;Sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.&#x3C;/p&#x3E;
+    &#x3C;/section&#x3E;
+    &#x3C;a name=&#x22;tab2-3&#x22; id=&#x22;tab2-3&#x22; class=&#x22;o-collectorium__anchor&#x22;&#x3E;&#x3C;/a&#x3E;
+    &#x3C;section role=&#x22;tabpanel&#x22; class=&#x22;o-collectorium__content&#x22;&#x3E;
+      &#x3C;h4&#x3E;Third tab content goes here...&#x3C;/h4&#x3E;
+      &#x3C;p&#x3E;Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.&#x3C;/p&#x3E;
+    &#x3C;/section&#x3E;
+    &#x3C;a name=&#x22;tab2-4&#x22; id=&#x22;tab2-4&#x22; class=&#x22;o-collectorium__anchor&#x22;&#x3E;&#x3C;/a&#x3E;
+    &#x3C;section role=&#x22;tabpanel&#x22; class=&#x22;o-collectorium__content&#x22;&#x3E;
+      &#x3C;h4&#x3E;Fourth tab content goes here...&#x3C;/h4&#x3E;
+      &#x3C;p&#x3E;Diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.&#x3C;/p&#x3E;
+    &#x3C;/section&#x3E;
+    &#x3C;a name=&#x22;tab2-1&#x22; id=&#x22;tab2-1&#x22; class=&#x22;o-collectorium__anchor&#x22;&#x3E;&#x3C;/a&#x3E;
+    &#x3C;section role=&#x22;tabpanel&#x22; class=&#x22;o-collectorium__content&#x22;&#x3E;
+      &#x3C;h4&#x3E;First tab content goes here...&#x3C;/h4&#x3E;
+      &#x3C;p&#x3E;Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.&#x3C;/p&#x3E;
+    &#x3C;/section&#x3E;
+  &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;</code></pre>
+          <pre><code class="language-javascript">var enhancedTabs1 = document.getElementById(&#x27;enhanced-tabs-1&#x27;);
+new Collectorium(enhancedTabs1);</code></pre>
         </section>
       </div>
     </article>
     <script src="../dist/js/collectorium.enhance.min.js"></script>
+    <script src="vendor/prism/prism.js"></script>
     <script>
       var enhancedTabsQuickDemo = document.getElementById('enhanced-tabs-quick-demo');
       new Collectorium(enhancedTabsQuickDemo);

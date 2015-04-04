@@ -24,7 +24,7 @@
 
 .o-collectorium__contents { padding: 1em; background: #efefef; }
 
-/**  */
+/** Defaults */
 html { -moz-box-sizing: border-box; box-sizing: border-box; }
 
 *, *:before, *:after { -moz-box-sizing: inherit; box-sizing: inherit; }
@@ -47,8 +47,11 @@ h4 { font-size: 1.5em; }
 
 a { color: #2a5570; }
 
+pre { font-size: 0.85em; }
+
 /** Objects */
-.o-container { margin: 0 auto; max-width: 32em; }
+.o-container { margin: 0 auto; max-width: 42em; }
+.o-container--narrow { max-width: 32em; }
 
 /** Components */
 .c-hero { padding: 3em 1em; background: #2a5570; }
@@ -77,6 +80,9 @@ a { color: #2a5570; }
 
 /** Utilities */
 .u-text-align-center { text-align: center !important; }
+
+/** Prism */
+pre.language-markup > code[data-language]:before { content: 'HTML'; }
 
 /*ul { padding-left: 1.5em;
 }

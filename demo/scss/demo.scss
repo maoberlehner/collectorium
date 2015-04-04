@@ -3,13 +3,17 @@
  */
 $cs-a: #2a5570;
 
+
+
 /**
  * Imports
  */
 @import '../../src/scss/collectorium.scss';
 
+
+
 /**
- * 
+ * Defaults
  */
 html {
   box-sizing: border-box;
@@ -98,6 +102,10 @@ a {
   color: $cs-a;
 }
 
+pre {
+  font-size: 0.85em;
+}
+
 
 
 /**
@@ -105,7 +113,10 @@ a {
  */
 .o-container {
   margin: 0 auto;
-  max-width: 32em;
+  max-width: 42em;
+  &--narrow {
+    max-width: 32em;
+  }
 }
 
 
@@ -198,6 +209,15 @@ a {
  */
 .u-text-align-center {
   text-align: center !important;
+}
+
+
+
+/**
+ * Prism
+ */
+pre.language-markup > code[data-language]:before {
+  content: 'HTML';
 }
 
 /*ul {
