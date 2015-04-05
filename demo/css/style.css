@@ -619,11 +619,11 @@ a { color: #2a5570; }
 pre { font-size: 0.85em; }
 
 /** Objects */
-.o-container { margin: 0 auto; max-width: 42em; }
+.o-container { margin: 0 auto; padding: 0 1em; max-width: 42em; }
 .o-container--narrow { max-width: 32em; }
 
 /** Components */
-.c-hero { padding: 3em 1em; background: #2a5570; }
+.c-hero { padding: 3em 0; background: #2a5570; }
 .c-hero__header { color: #fff; }
 
 .c-quick-demo { margin-top: 3em; }

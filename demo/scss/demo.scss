@@ -113,6 +113,7 @@ pre {
  */
 .o-container {
   margin: 0 auto;
+  padding: 0 1em;
   max-width: 42em;
   &--narrow {
     max-width: 32em;
@@ -126,7 +127,7 @@ pre {
  */
 // Hero
 .c-hero {
-  padding: 3em 1em;
+  padding: 3em 0;
   background: $cs-a;
   &__header {
     color: #fff;
