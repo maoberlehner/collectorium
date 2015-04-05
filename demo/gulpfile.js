@@ -7,6 +7,7 @@ var livereload   = require('gulp-livereload');
 var minifyCSS    = require('gulp-minify-css');
 var rename       = require('gulp-rename');
 var sass         = require('gulp-ruby-sass');
+var uncss        = require('gulp-uncss');
 
 // Styles
 gulp.task('styles', function () {
@@ -26,6 +27,10 @@ gulp.task('concat', ['styles'], function() {
 // Minify CSS
 gulp.task('minify_css', ['concat'], function () {
   return gulp.src(['css/style.css'])
+    .pipe(uncss({
+      ignore: [/(.*)\.is-active/, /\.token(.*)/, /pre(.*)/, '.namespace'],
+      html: ['index.html']
+    }))
     .pipe(minifyCSS())
     .pipe(cssshrink())
     .pipe(rename(function (path) {
