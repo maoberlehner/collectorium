@@ -1,6 +1,7 @@
 // Load plugins
 var gulp         = require('gulp');
 var autoprefixer = require('gulp-autoprefixer');
+var concat       = require('gulp-concat');
 var cssshrink    = require('gulp-cssshrink');
 var livereload   = require('gulp-livereload');
 var minifyCSS    = require('gulp-minify-css');
@@ -15,9 +16,16 @@ gulp.task('styles', function () {
     .pipe(gulp.dest('css'));
 });
 
+// Concat
+gulp.task('concat', ['styles'], function() {
+  return gulp.src(['vendor/normalize/normalize.css', 'vendor/prism/prism.css', 'css/demo.css'])
+    .pipe(concat('style.css'))
+    .pipe(gulp.dest('css'));
+});
+
 // Minify CSS
-gulp.task('minify_css', ['styles'], function () {
-  return gulp.src(['css/demo.css'])
+gulp.task('minify_css', ['concat'], function () {
+  return gulp.src(['css/style.css'])
     .pipe(minifyCSS())
     .pipe(cssshrink())
     .pipe(rename(function (path) {
@@ -29,7 +37,7 @@ gulp.task('minify_css', ['styles'], function () {
 
 // Watch
 gulp.task('watch', function () {
-  gulp.watch('scss/**/*.scss', ['styles', 'minify_css']);
+  gulp.watch('scss/**/*.scss', ['styles', 'concat', 'minify_css']);
 });
 
 // Default
