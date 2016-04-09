@@ -1,7 +1,7 @@
 {
   "name": "collectorium_demo",
   "description": "pure CSS tabs (Demo)",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Markus Oberlehner",
   "license": "GPL v2",
   "dependencies": {
@@ -14,7 +14,7 @@
     "avalanchesass_object_media": "avalanchesass/avalanche_object_media#dev-3.0.0",
     "browser-sync": "^2.11.1",
     "browserify": "^13.0.0",
-    "collectorium": "^1.0.0",
+    "collectorium": "^1.0.1",
     "del": "^2.2.0",
     "eyeglass": "^0.8.3",
     "gulp": "^3.9.0",
