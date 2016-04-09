@@ -1,0 +1,71 @@
+$collectorium-namespace: 'collectorium' !default;
+$collectorium-tab-link-background: #efefef !default;
+$collectorium-contents-background: #efefef !default;
+
+/**
+ * 1. Hide tab content by default, hide the last tab content if a previous one
+ *    is targeted or set active.
+ */
+.#{$collectorium-namespace}__content,
+.#{$collectorium-namespace}__anchor:target ~ :last-child,
+.#{$collectorium-namespace}__content.is-active ~ :last-child {
+  display: none; /* [1] */
+}
+
+/**
+ * 1. Show the last tab content by default, show tab content if the associated
+ *    anchor is targeted or if the tab content is set active.
+ */
+.#{$collectorium-namespace}__content:last-child,
+.#{$collectorium-namespace}__anchor:target + .#{$collectorium-namespace}__content,
+.#{$collectorium-namespace}__content.is-active {
+  display: block; /* [1] */
+}
+
+/**
+ * 1. Reset list styling.
+ */
+.#{$collectorium-namespace}__tabs {
+  padding-left: 0; /* [1] */
+  list-style-type: none; /* [1] */
+}
+
+/**
+ * 1. Display tab items side by side.
+ */
+.#{$collectorium-namespace}__tab-item {
+  display: inline-block; /* [1] */
+}
+
+/**
+ * 1. Characteristic tab styling.
+ * 2. Disable default link behaviour styling.
+ */
+.#{$collectorium-namespace}__tab-link {
+  display: inline-block;
+  padding: 0.5em 1em; /* [1] */
+  &,
+  &:hover,
+  &:focus {
+    text-decoration: none; /* [2] */
+  }
+  &:active,
+  &:focus,
+  &.is-active {
+    outline: none; /* [2] */
+    background: $collectorium-tab-link-background; /* [1] */
+  }
+}
+
+.#{$collectorium-namespace}__contents {
+  padding: 1em;
+  background: $collectorium-contents-background;
+}
+
+/**
+ * 1. Move the tab anchor to the top of the screen to prevent "jumping".
+ */
+.#{$collectorium-namespace}__anchor {
+  position: fixed; /* [1] */
+  top: 0; /* [1] */
+}
