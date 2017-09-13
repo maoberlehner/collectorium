@@ -2,28 +2,53 @@
   "name": "collectorium",
   "description": "pure CSS tabs",
   "keywords": [
-    "eyeglass-module",
+    "tabs",
+    "css",
     "sass"
   ],
   "version": "1.0.1",
   "author": "Markus Oberlehner",
-  "homepage": "https://github.com/maoberlehner/collectorium",
-  "license": "GPL v2",
+  "homepage": "https://collectorium.oberlehner.net",
+  "license": "MIT",
   "devDependencies": {
-    "browser-sync": "^2.11.1",
-    "del": "^2.2.0",
-    "eyeglass": "^0.8.3",
-    "gulp": "^3.9.0",
-    "gulp-autoprefixer": "^3.1.0",
-    "gulp-cssnano": "^2.0.1",
-    "gulp-minify-css": "^1.2.4",
-    "gulp-rename": "^1.2.2",
-    "gulp-sass": "^2.1.0",
-    "gulp-size": "^2.1.0",
-    "gulp-sourcemaps": "^1.5.2",
-    "gulp-uglify": "^1.5.3"
+    "@avalanche/eslint-config": "^1.0.2",
+    "@avalanche/generic-box-sizing-reset": "^4.0.0-alpha.4",
+    "@avalanche/object-container": "^4.0.0-alpha.7",
+    "@avalanche/object-media": "^4.0.0-alpha.5",
+    "@avalanche/object-vertical-spacing": "^4.0.0-alpha.4",
+    "@avalanche/setting-colors": "^4.0.0-alpha.4",
+    "@avalanche/setting-font-sizes": "^4.0.0-alpha.4",
+    "@avalanche/setting-spacings": "^4.0.0-alpha.5",
+    "@avalanche/stylelint-config": "^0.1.2",
+    "@avalanche/utility-text-align": "^4.0.0-alpha.4",
+    "autoprefixer": "^7.1.2",
+    "ava": "^0.22.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "clean-css-cli": "^4.1.6",
+    "eslint": "^4.5.0",
+    "eslint-plugin-compat": "^1.0.4",
+    "eslint-plugin-import": "^2.7.0",
+    "highlight.js": "^9.12.0",
+    "http-server": "^0.10.0",
+    "mock-browser": "^0.92.14",
+    "node-sass": "^4.5.3",
+    "node-sass-magic-importer": "^5.0.0-alpha.7",
+    "onchange": "^3.2.1",
+    "parallelshell": "^3.0.1",
+    "postcss-cli": "^4.1.0",
+    "rollup": "^0.47.4",
+    "rollup-plugin-babel": "^3.0.2",
+    "rollup-plugin-commonjs": "^8.1.0",
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "stylelint": "^8.0.0",
+    "testcafe": "^0.17.1",
+    "uglify-js": "^3.0.27"
   },
-  "main": "js/index.js",
+  "main": "dist/collectorium.js",
+  "module": "js/index.js",
+  "css": "dist/collectorium.css",
+  "sass": "scss/index.scss",
   "repository": {
     "type": "git",
     "url": "https://github.com/maoberlehner/collectorium"
@@ -31,9 +56,35 @@
   "bugs": {
     "url": "https://github.com/maoberlehner/collectorium/issues"
   },
-  "eyeglass": {
-    "sassDir": "scss",
-    "exports": false,
-    "needs": "^0.8.2"
+  "scripts": {
+    "styles:sass": "node-sass scss/index.scss dist/collectorium.css && node-sass --importer node_modules/node-sass-magic-importer/dist/cli.js demo/scss/index.scss demo/dist/index.css",
+    "styles:postcss": "postcss --use autoprefixer --replace dist/**/*.css && postcss --use autoprefixer --replace demo/dist/**/*.css",
+    "styles:minify": "cleancss --output dist/collectorium.min.css dist/collectorium.css && cleancss --output demo/dist/index.min.css demo/dist/index.css",
+    "styles": "npm run styles:sass && npm run styles:postcss && npm run styles:minify",
+    "scripts:bundle": "rollup --config --format umd --name collectorium --output dist/collectorium.js js/index.js",
+    "scripts:minify": "uglifyjs --compress --mangle --comments --output dist/collectorium.min.js dist/collectorium.js",
+    "scripts": "npm run scripts:bundle && npm run scripts:minify",
+    "build": "npm run styles && npm run scripts",
+    "watch:styles": "onchange scss/**/*.scss demo/scss/**/*.scss -- npm run styles",
+    "watch:scripts": "onchange js/**/*.js -- npm run scripts",
+    "watch": "parallelshell 'npm run watch:styles' 'npm run watch:scripts'",
+    "lint:styles": "stylelint demo/scss/**/*.scss scss/**/*.scss --syntax scss",
+    "lint:scripts": "eslint js/**/*.js rollup.config.js",
+    "lint": "npm run lint:styles && npm run lint:scripts",
+    "demo": "mkdir -p demo/vendor && cp -R node_modules/highlight.js demo/vendor && npm run build && cp -R dist/ demo/vendor/collectorium",
+    "serve-demo": "http-server demo/",
+    "test:unit": "BABEL_ENV=ava ava test/unit/**/*.test.js",
+    "test:acceptance": "npm run demo && testcafe chrome,firefox test/acceptance/ --app 'http-server demo/ -p 1337 -s'",
+    "test": "npm run test:unit && npm run test:acceptance",
+    "deploy": "npm run demo && rsync -avz --delete --exclude=/.* --exclude=/error --exclude=/stats --exclude=/google15e4ae9ecda47ac0.html -e ssh demo/ vs0.oberlehner.net:/var/www/collectorium.oberlehner.net/web"
+  },
+  "browserslist": [
+    "last 2 versions"
+  ],
+  "ava": {
+    "require": [
+      "babel-register"
+    ],
+    "babel": "inherit"
   }
 }
