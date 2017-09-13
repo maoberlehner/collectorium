@@ -1,0 +1,18 @@
+{
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "plugins": ["compat"],
+  "extends": "@avalanche/eslint-config",
+  "rules": {
+    "compat/compat": 2
+  },
+  "globals": {
+    "fixture": true,
+    "test": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 8
+  }
+}

@@ -1,0 +1,19 @@
+.c-quick-demo {
+  text-align: left;
+}
+
+.c-quick-demo__tab-link {
+  color: setting-color(a, contrast);
+
+  &:active,
+  &:focus,
+  &.is-active {
+    background: setting-color(a, contrast);
+    color: #444;
+  }
+}
+
+.c-quick-demo__contents {
+  background: setting-color(a, contrast);
+  color: #444;
+}
