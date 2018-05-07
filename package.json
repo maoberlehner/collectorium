@@ -6,7 +6,7 @@
     "css",
     "sass"
   ],
-  "version": "2.0.1",
+  "version": "2.0.2",
   "author": "Markus Oberlehner",
   "homepage": "https://collectorium.oberlehner.net",
   "license": "MIT",
@@ -72,7 +72,7 @@
     "lint:styles": "stylelint demo/scss/**/*.scss scss/**/*.scss --syntax scss",
     "lint:scripts": "eslint js/**/*.js rollup.config.js",
     "lint": "npm run lint:styles && npm run lint:scripts",
-    "demo": "npm run build && cp -a dist/. demo/vendor/collectorium/",
+    "demo": "npm run init && npm run build && cp -a dist/. demo/vendor/collectorium/",
     "serve-demo": "http-server demo/",
     "test:unit": "BABEL_ENV=ava ava test/unit/**/*.test.js",
     "test:acceptance": "npm run demo && testcafe chrome,firefox test/acceptance/ --app 'http-server demo/ -p 1337 -s'",
