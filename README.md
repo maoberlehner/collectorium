@@ -1,14 +1,18 @@
 # collectorium
+
 [![Build Status](https://travis-ci.org/maoberlehner/collectorium.svg?branch=master)](https://travis-ci.org/maoberlehner/collectorium)
 
 pure CSS tabs (https://collectorium.oberlehner.net).
 
 ## Usage
+
 ### As an npm module
+
 To use collectorium in your Sass project, it is recommended to use the [node-sass-magic-importer](https://github.com/maoberlehner/node-sass-magic-importer/tree/master/packages/node-sass-magic-importer) node-sass importer so it is possible to easily load collectorium directly from your `node_modules` directory.
 Make sure you checkout the [usage section](https://github.com/maoberlehner/node-sass-magic-importer/tree/master/packages/node-sass-magic-importer#usage) on how to use the [node-sass-magic-importer](https://github.com/maoberlehner/node-sass-magic-importer/tree/master/packages/node-sass-magic-importer).
 
 Install collectorium:
+
 ```bash
 npm install collectorium --save
 ```
@@ -53,6 +57,7 @@ collectorium('.collectorium', {
 ```
 
 ### Standalone (without npm)
+
 Download https://github.com/maoberlehner/collectorium/archive/2.0.0.zip. Add the files to your HTML file like in the following example:
 
 ```html
@@ -67,11 +72,14 @@ Download https://github.com/maoberlehner/collectorium/archive/2.0.0.zip. Add the
 ```
 
 ## About
+
 ### Author
+
 Markus Oberlehner  
 Website: https://markus.oberlehner.net  
 Twitter: https://twitter.com/MaOberlehner  
 PayPal.me: https://paypal.me/maoberlehner
 
 ### License
+
 MIT
