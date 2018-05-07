@@ -1,6 +1,9 @@
 # collectorium
 
+[![Patreon](https://img.shields.io/badge/patreon-donate-blue.svg)](https://www.patreon.com/maoberlehner)
+[![Donate](https://img.shields.io/badge/Donate-PayPal-blue.svg)](https://paypal.me/maoberlehner)
 [![Build Status](https://travis-ci.org/maoberlehner/collectorium.svg?branch=master)](https://travis-ci.org/maoberlehner/collectorium)
+[![GitHub stars](https://img.shields.io/github/stars/maoberlehner/collectorium.svg?style=social&label=Star)](https://github.com/maoberlehner/collectorium)
 
 pure CSS tabs (https://collectorium.oberlehner.net).
 
@@ -78,7 +81,8 @@ Download https://github.com/maoberlehner/collectorium/archive/2.0.0.zip. Add the
 Markus Oberlehner  
 Website: https://markus.oberlehner.net  
 Twitter: https://twitter.com/MaOberlehner  
-PayPal.me: https://paypal.me/maoberlehner
+PayPal.me: https://paypal.me/maoberlehner  
+Patreon: https://www.patreon.com/maoberlehner
 
 ### License
 
